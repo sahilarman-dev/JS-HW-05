@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    cursor: none;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  body {
+    font-family: "arial";
+  }
+  .container {
+    width: 1170px;
+    margin: auto;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .align-center {
+    align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  
+  
+  .cursorSm {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.2ms;
+    pointer-events: none;
+  }
+  .cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+  #faqWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .faq {
+    max-width: 500px;
+    border: 1px solid #888;
+    margin: 10px 0;
+  }
+  
+  .faq .faqHeader {
+    padding: 15px;
+    border-bottom: 1px solid #888;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq .faqHeader button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+  }
+  .faq .faqBody {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0s;
+  }
+  .faq .faqBody .faqCnt {
+    padding: 15px;
+  }
+  
+  .faq.active .faqBody {
+      overflow: auto;
+      max-height: 300px;
+      transition: 0.3s;
+  }
